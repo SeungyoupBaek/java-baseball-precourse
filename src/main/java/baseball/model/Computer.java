@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Computer {
     private static Computer instance;
-    public String number;
+    private String number;
 
     private Computer() {
         number = getRandomNumber();
@@ -17,6 +17,10 @@ public class Computer {
             instance = new Computer();
         }
         return instance;
+    }
+
+    public String getNumber() {
+        return number;
     }
 
     public void reset() {

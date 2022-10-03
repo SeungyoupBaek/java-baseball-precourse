@@ -30,7 +30,7 @@ public class GameController {
             return input;
         }
 
-        HashMap<String, Integer> ballStrike = Machine.logic(Computer.getInstance().number, input);
+        HashMap<String, Integer> ballStrike = Machine.logic(Computer.getInstance().getNumber(), input);
         GameView.printResultView(ballStrike);
 
         return ballStrike.get("스트라이크") == 3? "3" : input;
