@@ -8,7 +8,7 @@ import camp.nextstep.edu.missionutils.Console;
 import java.util.HashMap;
 
 public class GameController {
-    public static void gameStart() {
+    public static void gameStart() throws IllegalArgumentException {
         String input = "";
 
         while (!input.equals("2")) {
