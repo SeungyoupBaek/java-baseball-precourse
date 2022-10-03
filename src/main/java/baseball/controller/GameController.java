@@ -19,7 +19,7 @@ public class GameController {
         GameView.endView(input);
     }
 
-    public static String play(String input) {
+    private static String play(String input) {
         if (input.equals("2")) {
             return input;
         }
@@ -36,7 +36,7 @@ public class GameController {
         return ballStrike.get("스트라이크") == 3? "3" : input;
     }
 
-    public static String input() {
+    private static String input() {
         GameView.inputView();
         return Console.readLine();
     }

@@ -22,7 +22,7 @@ public class NumberCheckUtil {
     }
 
     // 입력값이 1일 경우 초기화
-    public static boolean isReset(String num) {
+    private static boolean isReset(String num) {
         if (num.equals("1")) {
             Computer.getInstance().reset();
             return true;
@@ -31,7 +31,7 @@ public class NumberCheckUtil {
     }
 
     // 입력한 문자가 유효한 범위 내에 있는지 체크
-    public static void isInScope(String str) throws IllegalArgumentException {
+    private static void isInScope(String str) throws IllegalArgumentException {
         String scope = "123456789";
 
         if (!scope.contains(str))
@@ -39,7 +39,7 @@ public class NumberCheckUtil {
     }
 
     // 입력된 문자열에서 중복된 문자 체크
-    public static void isDuplicate(char[] chars) throws IllegalArgumentException {
+    private static void isDuplicate(char[] chars) throws IllegalArgumentException {
         if (chars[0] == chars[1] || chars[0] == chars[2])
             throw new IllegalArgumentException();
 

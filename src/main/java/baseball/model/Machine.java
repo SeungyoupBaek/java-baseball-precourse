@@ -17,13 +17,13 @@ public class Machine {
         return ballStrike;
     }
 
-    public static void iterate(char[] chars, char ch, int index, HashMap<String, Integer> ballStrike) {
+    private static void iterate(char[] chars, char ch, int index, HashMap<String, Integer> ballStrike) {
         for (int i = 0; i < chars.length; i++) {
             compare(chars[i], ch, i, index, ballStrike);
         }
     }
 
-    public static void compare(char ch1, char ch2, int i1, int i2, HashMap<String, Integer> ballStrike) {
+    private static void compare(char ch1, char ch2, int i1, int i2, HashMap<String, Integer> ballStrike) {
         if (ch1 == ch2 && i1 == i2) {
             ballStrike.put("스트라이크", ballStrike.get("스트라이크") + 1);
         }
